@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using ProductManagement.Attributes;
+using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 
 namespace ProductManagement
@@ -6,8 +8,10 @@ namespace ProductManagement
     public class FilterConfig
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-        {
-            filters.Add(new HandleErrorAttribute());
+        {           
+            // Not requred since exception filter will be registered through Autofac type registrations
+            //filters.Add(new HandleErrorAttribute());
+            
         }
     }
 }

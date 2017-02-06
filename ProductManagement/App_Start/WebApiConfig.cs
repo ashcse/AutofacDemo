@@ -19,6 +19,8 @@ namespace ProductManagement
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            AutofacWebAPiConfig.Initialize(config);
         }
     }
 }
